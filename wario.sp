@@ -1,5 +1,4 @@
 #pragma semicolon 1
-#define DEBUG
 #include <sourcemod>
 #include <sdktools>
 #include <tf2>
@@ -16,5 +15,14 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-	PrintToServer( "YAAA WARIO TIME! OH BOY!" );
+	PrintToServer( "[WarioMap] Successfully loaded." );
+}
+
+public void OnMapEnd()
+{
+	int rand = GetRandomInt( 1, 100 );
+	if ( rand <= 10 )
+	{
+		ForceChangeLevel( "cp_5gorge", "WARIO TIME!" );
+	}
 }
