@@ -27,7 +27,7 @@ public void OnMapEnd()
 	else
 	{
 		int rand = GetRandomInt( 1, 10 );
-		if ( rand <= 100 )
+		if ( rand <= 10 )
 		{
 			SetFreakMap();
 		}
@@ -54,7 +54,7 @@ static void SetFreakMap()
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
-	ForceChangeLevel( MapList[rand], "Switching to Freak Fortress." );
+	SetNextMap( MapList[rand] );
 }
 
 static void SetRandomMap()
@@ -85,5 +85,5 @@ static void SetRandomMap()
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
-	ForceChangeLevel( MapList[rand], "Switching back to normal modes." );
+	SetNextMap( MapList[rand] );
 }
