@@ -22,14 +22,14 @@ public void OnMapEnd()
 {
 	if ( ValidFreakMap() )
 	{
-		SetRandomMap();
+		SetFreakMap();
 	}
 	else
 	{
 		int rand = GetRandomInt( 1, 10 );
 		if ( rand <= 10 )
 		{
-			SetFreakMap();
+			SetRandomMap();
 		}
 	}
 }
