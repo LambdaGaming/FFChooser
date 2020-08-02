@@ -1,2 +1,2 @@
 # ModeChooser
- Small chance of a special map being chosen after a round on a normal map ends.
+ 10% chance of Freak Fortress activating during normal map rotation.

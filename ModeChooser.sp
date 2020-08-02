@@ -8,7 +8,7 @@ public Plugin myinfo =
 {
 	name = "ModeChooser",
 	author = "LambdaGaming",
-	description = "Random chance to change to special round.",
+	description = "10% chance of Freak Fortress activating during normal map rotation.",
 	version = "1.0",
 	url = ""
 };
@@ -29,18 +29,28 @@ public void OnMapEnd()
 		int rand = GetRandomInt( 1, 10 );
 		if ( rand <= 10 )
 		{
+			SetFreakMap();
+		}
+		else
+		{
 			SetRandomMap();
 		}
 	}
+}
+
+public void OnClientPutInServer( int client )
+{
+	if ( ValidFreakMap() )
+		PrintToChat( client, "Freak Fortress is currently active. Switch to a non-arena map to resume normal gameplay." );
 }
 
 static bool ValidFreakMap()
 {
 	char buffer[64]; // I'm starting to not like this langauge
 	GetCurrentMap( buffer, sizeof( buffer ) ); // You know, Lua would have been a great scripting language for SourceMod
-	if ( StrContains( buffer, "arena", false ) == 0 || StrContains( buffer, "vsh", false ) == 0 )
-		return true;
-	return false;
+	
+	bool freakmap = StrContains( buffer, "arena", false ) == 0 || StrContains( buffer, "vsh", false ) == 0;
+	return freakmap;
 }
 
 static void SetFreakMap()
