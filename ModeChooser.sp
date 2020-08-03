@@ -57,10 +57,17 @@ static void SetFreakMap()
 {
 	char MapList[][] = {
 		"arena_badlands",
+		"arena_byre",
 		"arena_granary",
+		"arena_lumberyard",
+		"arena_nucleus",
+		"arena_offblast_final",
+		"arena_ravine",
 		"arena_sawmill",
+		"arena_watchtower",
 		"arena_well",
-		"vsh_shipment_v1"
+		"vsh_shipment_v1a",
+		"vsh_scp_3008_final3"
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
