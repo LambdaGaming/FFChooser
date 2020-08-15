@@ -49,7 +49,7 @@ static bool ValidFreakMap()
 	char buffer[64]; // I'm starting to not like this langauge
 	GetCurrentMap( buffer, sizeof( buffer ) ); // You know, Lua would have been a great scripting language for SourceMod
 	
-	bool freakmap = StrContains( buffer, "arena", false ) == 0 || StrContains( buffer, "vsh", false ) == 0;
+	bool freakmap = StrContains( buffer, "arena", false ) == 0 || StrContains( buffer, "vsh", false ) == 0 || StrContains( buffer, "koth", false ) == 0;
 	return freakmap;
 }
 
