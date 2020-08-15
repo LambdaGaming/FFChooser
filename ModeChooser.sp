@@ -67,7 +67,27 @@ static void SetFreakMap()
 		"arena_watchtower",
 		"arena_well",
 		"vsh_shipment_v1a",
-		"vsh_scp_3008_final3"
+		"vsh_scp_3008_final3",
+		"koth_badlands",
+		"koth_bagel_event",
+		"koth_brazil",
+		"koth_harvest_event",
+		"koth_harvest_final",
+		"koth_highpass",
+		"koth_king",
+		"koth_lakeside_event",
+		"koth_lakeside_final",
+		"koth_lazarus",
+		"koth_maple_ridge_event",
+		"koth_moonshine_event",
+		"koth_nucleus",
+		"koth_probed",
+		"koth_sawmill",
+		"koth_slasher",
+		"koth_slaughter_event",
+		"koth_suijin",
+		"koth_viaduct",
+		"koth_viaduct_event"
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
