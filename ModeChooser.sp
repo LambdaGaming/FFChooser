@@ -49,7 +49,7 @@ static bool ValidFreakMap()
 	char buffer[64]; // I'm starting to not like this langauge
 	GetCurrentMap( buffer, sizeof( buffer ) ); // You know, Lua would have been a great scripting language for SourceMod
 	
-	bool freakmap = StrContains( buffer, "arena", false ) == 0 || StrContains( buffer, "vsh", false ) == 0 || StrContains( buffer, "koth", false ) == 0;
+	bool freakmap = StrContains( buffer, "arena", false ) == 0 || StrContains( buffer, "vsh", false ) == 0;
 	return freakmap;
 }
 
@@ -67,27 +67,7 @@ static void SetFreakMap()
 		"arena_watchtower",
 		"arena_well",
 		"vsh_shipment_v1a",
-		"vsh_scp_3008_final3",
-		"koth_badlands",
-		"koth_bagel_event",
-		"koth_brazil",
-		"koth_harvest_event",
-		"koth_harvest_final",
-		"koth_highpass",
-		"koth_king",
-		"koth_lakeside_event",
-		"koth_lakeside_final",
-		"koth_lazarus",
-		"koth_maple_ridge_event",
-		"koth_moonshine_event",
-		"koth_nucleus",
-		"koth_probed",
-		"koth_sawmill",
-		"koth_slasher",
-		"koth_slaughter_event",
-		"koth_suijin",
-		"koth_viaduct",
-		"koth_viaduct_event"
+		"vsh_scp_3008_final3"
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
