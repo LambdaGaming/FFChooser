@@ -9,7 +9,7 @@ public Plugin myinfo =
 	name = "ModeChooser",
 	author = "LambdaGaming",
 	description = "10% chance of Freak Fortress activating during normal map rotation.",
-	version = "1.0",
+	version = "1.1",
 	url = ""
 };
 
@@ -41,13 +41,16 @@ public void OnMapEnd()
 public void OnClientPutInServer( int client )
 {
 	if ( ValidFreakMap() )
+	{
 		PrintToChat( client, "Freak Fortress is currently active. Switch to a non-arena map to resume normal gameplay." );
+		PrintToChat( client, "If you need the Freak Fortress content, see the #team-fortress-2 channel on our discord server: https://discord.gg/9RGdUS2" );
+	}
 }
 
 static bool ValidFreakMap()
 {
-	char buffer[64]; // I'm starting to not like this langauge
-	GetCurrentMap( buffer, sizeof( buffer ) ); // You know, Lua would have been a great scripting language for SourceMod
+	char buffer[64];
+	GetCurrentMap( buffer, sizeof( buffer ) );
 	
 	bool freakmap = StrContains( buffer, "arena", false ) == 0 || StrContains( buffer, "vsh", false ) == 0;
 	return freakmap;
