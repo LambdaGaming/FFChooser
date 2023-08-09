@@ -43,7 +43,7 @@ public void OnClientPutInServer( int client )
 	if ( ValidFreakMap() )
 	{
 		PrintToChat( client, "Freak Fortress is currently active. Switch to a non-arena map to resume normal gameplay." );
-		PrintToChat( client, "If you need the Freak Fortress content, see the #team-fortress-2 channel on our discord server: https://discord.gg/9RGdUS2" );
+		PrintToChat( client, "If you need the Freak Fortress content, see the #useful-links channel on our discord server: https://discord.gg/9RGdUS2" );
 	}
 }
 
@@ -59,18 +59,12 @@ static bool ValidFreakMap()
 static void SetFreakMap()
 {
 	char MapList[][] = {
-		"arena_badlands",
-		"arena_byre",
-		"arena_granary",
-		"arena_lumberyard",
-		"arena_nucleus",
-		"arena_offblast_final",
-		"arena_ravine",
-		"arena_sawmill",
-		"arena_watchtower",
-		"arena_well",
-		"vsh_shipment_v1a",
-		"vsh_scp_3008_final3"
+		"arena_badlands", "arena_byre", "arena_granary",
+		"arena_lumberyard", "arena_lumberyard_event", "arena_nucleus",
+		"arena_offblast_final", "arena_ravine", "arena_sawmill",
+		"arena_watchtower", "arena_well", "vsh_shipment_v1a",
+		"vsh_scp_3008_final3", "vsh_distillery", "vsh_nucleus",
+		"vsh_skirmish", "vsh_tinyrock"
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
@@ -80,28 +74,12 @@ static void SetFreakMap()
 static void SetRandomMap()
 {
 	char MapList[][] = {
-		"cp_5gorge",
-		"cp_badlands",
-		"cp_coldfront",
-		"cp_dustbowl",
-		"cp_fastlane",
-		"cp_foundry",
-		"cp_gravelpit",
-		"cp_granary",
-		"cp_powerhouse",
-		"cp_process_final",
-		"cp_snakewater_final1",
-		"cp_standin_final",
-		"cp_yukon_final",
-		"cp_well",
-		"ctf_2fort",
-		"ctf_2fort_invasion",
-		"ctf_foundry",
-		"ctf_gorge",
-		"ctf_sawmill",
-		"ctf_thundermountain",
-		"ctf_turbine",
-		"ctf_well"
+		"cp_5gorge", "cp_badlands", "cp_coldfront", "cp_dustbowl",
+		"cp_fastlane", "cp_foundry", "cp_gravelpit", "cp_granary",
+		"cp_powerhouse", "cp_process_final", "cp_snakewater_final1",
+		"cp_standin_final", "cp_yukon_final", "cp_well", "ctf_2fort",
+		"ctf_2fort_invasion", "ctf_foundry", "ctf_gorge", "ctf_sawmill",
+		"ctf_thundermountain", "ctf_turbine", "ctf_well"
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
