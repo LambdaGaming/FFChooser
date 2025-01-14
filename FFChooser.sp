@@ -9,7 +9,7 @@ public Plugin myinfo =
 	name = "ModeChooser",
 	author = "LambdaGaming",
 	description = "10% chance of Freak Fortress activating during normal map rotation.",
-	version = "1.1",
+	version = "1.3",
 	url = ""
 };
 
@@ -64,7 +64,8 @@ static void SetFreakMap()
 		"arena_offblast_final", "arena_ravine", "arena_sawmill",
 		"arena_watchtower", "arena_well", "vsh_shipment_v1a",
 		"vsh_scp_3008_final3", "vsh_distillery", "vsh_nucleus",
-		"vsh_skirmish", "vsh_tinyrock"
+		"vsh_skirmish", "vsh_tinyrock", "arena_perks", "vsh_maul",
+		"vsh_outburst"
 	};
 	
 	int rand = GetRandomInt( 0, sizeof( MapList ) - 1 );
